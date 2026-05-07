@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 
 const TTSScorecard = () => {
-  const [stage, setStage] = useState('landing'); // landing, quiz, results
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [score, setScore] = useState(null);
+const [stage, setStage] = useState<'landing' | 'quiz' | 'results'>('landing');
+const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+const [answers, setAnswers] = useState<Record<string, number>>({});
+const [score, setScore] = useState<number | null>(null);
 
   const questions = [
     // FREQUENCY TEST (40 points total)
